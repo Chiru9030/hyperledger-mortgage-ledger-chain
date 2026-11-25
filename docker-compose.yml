@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    container_name: mortgage_fabric_server
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+
+  client:
+    build: ./client
+    container_name: mortgage_fabric_client
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
