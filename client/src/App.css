@@ -1,0 +1,83 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 10px;
+}
+
+.role-selector {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.role-selector select {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: white;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}

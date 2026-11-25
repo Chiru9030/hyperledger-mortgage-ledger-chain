@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment & Identities
+.env
+.env.local
+wallet/
+wallets/
+*.id
+*.pem
+*.key
+
+# Build & Dist
+build/
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
