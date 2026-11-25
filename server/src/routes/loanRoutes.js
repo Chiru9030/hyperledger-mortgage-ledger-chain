@@ -1,16 +1,14 @@
-/* src/routes/loanRoutes.js */
 const express = require('express');
 const router = express.Router();
 const loanController = require('../controllers/loanController');
 const multer = require('multer');
-const path = require('path');
+const upload = multer({ dest: 'uploads/' });
 
-// Configure Multer for file uploads
-const upload = multer({ dest: path.join(__dirname, '..', '..', 'uploads') });
-
-router.post('/', loanController.createLoan);
-router.post('/document', upload.single('file'), loanController.uploadDocument);
-router.put('/status', loanController.updateStatus);
+// Mortgage Lifecycle Endpoints
+router.get('/', loanController.listLoans);
+router.post('/create', loanController.createLoan);
+router.post('/upload-doc', upload.single('document'), loanController.uploadDocument);
+router.post('/status', loanController.updateStatus);
 router.post('/sign', loanController.signClosing);
 router.get('/:loanId', loanController.getLoan);
 
